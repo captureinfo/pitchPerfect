@@ -76,20 +76,16 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yvI-48-fjN">
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKp-kJ-0Fv" userLabel="RabbitButton">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="172" id="vaM-1O-JPI"/>
-                                                    <constraint firstAttribute="height" constant="223" id="zYn-Bo-L1T"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="RabbitButton"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgL-rj-Sb4" userLabel="SnailButton">
+                                                <state key="normal" image="SnailButton"/>
                                                 <connections>
-                                                    <action selector="playSoundForButton:" destination="nc1-yl-tXS" eventType="touchUpInside" id="jzA-CO-6kc"/>
+                                                    <action selector="playSoundForButton:" destination="nc1-yl-tXS" eventType="touchUpInside" id="bqX-8t-8Dq"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iku-GV-XMb" userLabel="SnailButton">
-                                                <state key="normal" title="Button" image="SnailButton"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10O-OC-NAh" userLabel="RabbitButton">
+                                                <state key="normal" image="RabbitButton"/>
                                                 <connections>
-                                                    <action selector="playSoundForButton:" destination="nc1-yl-tXS" eventType="touchUpInside" id="8FG-Q7-jd5"/>
+                                                    <action selector="playSoundForButton:" destination="nc1-yl-tXS" eventType="touchUpInside" id="9dc-lS-7n4"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -128,8 +124,8 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nxg-tt-q8c">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqB-tp-1JM" userLabel="StopButton">
-                                                <state key="normal" backgroundImage="stopRecording"/>
+                                            <button autoresizesSubviews="NO" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqB-tp-1JM" userLabel="StopButton">
+                                                <state key="normal" image="stopRecording"/>
                                                 <connections>
                                                     <action selector="stopButtonPressed:" destination="nc1-yl-tXS" eventType="touchUpInside" id="Tm0-ke-FSG"/>
                                                 </connections>
@@ -150,9 +146,9 @@
                     <connections>
                         <outlet property="chipmunkButton" destination="T9V-D7-thE" id="Scb-mG-Niu"/>
                         <outlet property="echoButton" destination="i2W-ef-DUv" id="Utm-xq-ZJi"/>
-                        <outlet property="rabbitButton" destination="gKp-kJ-0Fv" id="9K5-6m-iIR"/>
+                        <outlet property="rabbitButton" destination="10O-OC-NAh" id="yJa-tb-Erj"/>
                         <outlet property="reverbButton" destination="vsL-AT-70c" id="fmg-i2-onE"/>
-                        <outlet property="snailButton" destination="iku-GV-XMb" id="SF3-Wi-kta"/>
+                        <outlet property="snailButton" destination="LgL-rj-Sb4" id="F72-Dl-nkj"/>
                         <outlet property="stopButton" destination="jqB-tp-1JM" id="ZfL-7H-tRZ"/>
                         <outlet property="vaderButton" destination="DNQ-Bc-p6S" id="dNn-Fb-Ieg"/>
                     </connections>
@@ -166,7 +162,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s8j-5S-4he" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5WS-2X-RqG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5WS-2X-RqG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

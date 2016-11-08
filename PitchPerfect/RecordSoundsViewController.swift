@@ -22,15 +22,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
    
     @IBAction func stopRecording(_ sender: AnyObject) {
-        print("stop recording button pressed")
         recordButton.isEnabled = true
         stopRecording.isEnabled = false
         recordingLabel.text = "Tab to Record"
@@ -59,13 +52,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear called")
-    }
+    
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         print("AVAudioRecorder finished saving recording")
         if(flag){
-            self.performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         }else{
             print("Saving of recording failed")
         }

@@ -25,7 +25,7 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     
-    enum ButtonType: Int {case  Slow = 0, Fast, Chipmunk, Vader, Echo, Reverb }
+    enum ButtonType: Int { case  Slow = 0, Fast, Chipmunk, Vader, Echo, Reverb }
     
     @IBAction func playSoundForButton(_ sender: UIButton) {
         print("Play Sound Button Pressed")
@@ -52,7 +52,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     var recordedAudioURL: NSURL!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("PlaySoundsViewController loaded")
@@ -63,27 +63,10 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         configureUI(playState: .NotPlaying)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "stopRecording") {
-            let playSoundsVC = segue.destination as! PlaySoundsViewController
-            let recordedAudioURL = sender as! NSURL
-            playSoundsVC.recordedAudioURL = recordedAudioURL
-        }
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        
 }
