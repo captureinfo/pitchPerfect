@@ -138,7 +138,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tR4-Kk-su2" firstAttribute="top" secondItem="mJr-Mo-XzC" secondAttribute="bottom" id="Lg3-2V-X1Y"/>
-                            <constraint firstItem="mJr-Mo-XzC" firstAttribute="centerY" secondItem="gkf-UH-SWd" secondAttribute="centerY" id="ZLx-DD-7bC"/>
+                            <constraint firstItem="mJr-Mo-XzC" firstAttribute="centerY" secondItem="gkf-UH-SWd" secondAttribute="centerY" constant="40" id="ZLx-DD-7bC"/>
                             <constraint firstItem="mJr-Mo-XzC" firstAttribute="leading" secondItem="gkf-UH-SWd" secondAttribute="leadingMargin" id="cr3-rr-00Q"/>
                             <constraint firstItem="mJr-Mo-XzC" firstAttribute="centerX" secondItem="gkf-UH-SWd" secondAttribute="centerX" id="hCY-MG-RGf"/>
                         </constraints>
